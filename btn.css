@@ -1,0 +1,41 @@
+#btn-card{
+    overflow: hidden;
+    transform: translateY(180deg);
+    z-index:5;
+    cursor:pointer;
+    position: absolute;
+    left:30%;
+    top:65%;
+    color:#000;
+    border:none;
+    padding:1em 2em;
+    border-radius:30px;
+    background-color: orange;
+    box-shadow:inset 0px -0px 0px 0px orangered,
+    0px 0px 0px 0px orange;
+    transition: 0.3s;
+}
+#btn-card:hover{
+    transform: translate(0,-6px);
+    box-shadow:inset 10px -10px 25px 0px orangered,
+    -10px 10px 25px 0px orange;
+}
+.hide-wish{
+    position:absolute;
+    bottom:-45px;
+    left:-130px;
+    padding:0.15em 1.5em;
+    border:none;
+    outline:none;
+    border-radius:8px;
+    transition:0.25s;
+    background-color:orange;
+}
+.hide-wish:hover{
+    transform: translate(0,-6px);
+    box-shadow: inset 10px -10px 25px 0px orangered,
+    -10px 10px 25px 0px orange;
+}
+.hide-wish h2{
+    font-size: 17px;
+}

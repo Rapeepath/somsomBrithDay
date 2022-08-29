@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cdn">
+        <div class="day">
+            <span id="day"></span>
+            <h2>Day</h2>
+        </div>
+        <div class="hour">
+            <span id="hour"></span>
+            <h2>hour</h2>
+        </div>
+        <div class="minust">
+            <span id="minust"></span>
+            <h2>minust</h2>
+        </div>
+        <div class="second">
+            <span id="second"></span>
+            <h2>second</h2>
+        </div>
+    </div>
+    <button id="btn">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+       <a href="card.html">Next</a></button>
+
+
+       <script>
+        const second = 1000;
+const minutes = second*60;
+const hours = minutes*60;
+const day = hours*24;
+
+function inner(text,id){
+    const elem = document.getElementById(id)
+    elem.innerText=text;
+
+}
+
+function countdown(){
+    const now = new Date().getTime();
+    const last = new Date('August 28,2023 23:59').getTime();
+    const left = last-now;
+   if(left===0 || left<0){
+        console.log("Stop wah")
+        const btn = document.getElementById('btn');
+        clearInterval(stp);
+    }
+    inner(Math.floor(left/day),"day");
+    inner(Math.floor(left%day/hours),"hour");
+    inner(Math.floor(left%hours/minutes),'minust');
+    inner(Math.floor(left%minutes/second),'second');
+}
+
+function next(){
+    const contain = document.getElementById('container');
+    contain.style.display = 'none';
+    const mainbd = document.getElementById('mainBd');
+    mainbd.style.display='block'
+}
+
+function run(){
+    const stp=setInterval(()=>{
+        countdown();
+    },1000)
+    console.log(msg)
+}
+run();
+
+       </script>
+</body>
+</html>

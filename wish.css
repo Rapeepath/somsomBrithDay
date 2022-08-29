@@ -1,0 +1,82 @@
+.wish{
+    width:600px;
+    height:300px;
+    perspective: 800px;
+    display: none;
+}
+.wishtext{
+    width:300px;
+    height:300px;
+    border-radius:8px;
+    background-color:rgb(255, 206, 146);
+    padding:1.5rem;
+}
+.wishtext h3{
+    color:salmon;
+}
+.block-wish{
+    position: absolute;
+    left:400px;
+    top:0;
+}
+.box{
+    perspective: 800px;
+}
+.box-frames{
+    position:absolute;
+    width:400px;
+    height:140px;
+    padding:0;
+    background-color: orange;
+    box-shadow:0 5px 10px rgba(255,255,255,0.5);
+    transform: rotateY(-220deg) rotateX(20deg);
+}
+.frames{
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    width:100%;
+    height:100%;
+    transform: rotateY(180deg);
+}
+.box-frames:nth-child(1){
+    top:-100px;
+}
+.box-frames:nth-child(2){
+    top:0;
+    background-color: goldenrod;
+}
+.box-frames:nth-child(3){
+    top:100px;
+    background-color: burlywood;
+}
+
+.frames img{
+    width:100px;
+    border-radius:50%;
+}
+.new-wish{
+    perspective: 800px;
+}
+.new-wish button{
+    position: absolute;
+    top:200px;
+    border:0;
+    width:400px;
+    height:150px;
+    border:8px dashed orangered;
+    background-color: antiquewhite;
+    outline: none;
+    transform: rotateY(-220deg) rotateX(20deg);
+    cursor:pointer;
+}
+.new-wish button h3{
+    transform: rotateY(180deg);
+    color:salmon;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
